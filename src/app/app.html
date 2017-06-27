@@ -1,0 +1,19 @@
+<ion-menu [content]="content" style="width: 220px;">
+  <ion-header>
+    <ion-toolbar style="background-color: blue;">
+      <ion-title>
+          <img src="assets/images/covericon.jpg" alt="Jitesh Karanjkar" style="vertical-align: left ; border: 1px solid #ddd; border-radius: 1px; padding: 1px; width: 50px; border-radius: 55%; box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);">
+          Jitesh Karanjkar
+   </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content >
+    <ion-list style="width: 200px;">
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <b>{{p.title}}</b>
+        <ion-icon name="{{p.icon}}" item-right></ion-icon>
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>

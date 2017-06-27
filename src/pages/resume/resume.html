@@ -1,0 +1,206 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon> 
+    </button>
+    <ion-title>
+      Resume
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color:black;">
+  <div class="resume">
+      <span><em>Find out what I've accomplished so far </em> <h2>DIG A LITTLE DEEPER</h2></span>
+  </div>
+  
+  <button title="Resume" class="btn btn-primary" (click)="downloadResume()">Download Resume</button>
+    
+  <hr>
+  
+  <div id="faq" role="tablist" aria-multiselectable="true">
+    <div class="card">
+      <div class="card-header" role="tab" id="questionOne">
+        <h5 class="card-title">
+          <a data-toggle="collapse" data-parent="#faq" href="#answerOne" aria-expanded="true" aria-controls="answerOne">
+            Professional Overview 
+          </a>
+        </h5>
+      </div>
+      <div id="answerOne" class="collapse" role="tabcard" aria-labelledby="questionOne">
+        <div class="card-block">
+          <ol>
+            <li>
+              A full stack Microsoft Professional with over 12 years of experience in Design and development in Web and Windows applications. Worked closely with clients and subject matter experts to design and develop high-quality solutions for the business.
+            </li>
+            <li>
+              Actively involved in various phases of Software Development Life Cycle (SDLC): requirement gathering, design and analysis, development, unit testing, change management and deployment.
+            </li>
+            <li>
+              Developed modern and highly interactive Ajax based Web applications using Microsoft technologies (.Net framework, ASP.NET, ASP.NET MVC, Web API, C#, Angular 2/4, Typescript, JavaScript, MVC, SOAP, RestFull, MSSQL, Specflow, Selenium, Visual Studio, TFS, VSC, Enterprise Architect WCF, SQL Server, SSRS) and Open Source technologies (jQuery, HTML, CSS, XML, AngularJS, Bootstrap) and have experience in Information architecture. 
+            </li>
+            <li>
+              Strong and effective inter-personal and communication skills with ability to interact professionally with a diverse group of clients and staff. Focused on consistent high quality of work and deliverables.
+            </li>
+            <li>
+              Have worked on multiple domains Banking, CRM and Public Sector domain (Integrated Eligibility and Child Care).
+            </li>
+            <li>
+              Leadership experience includes: handling modules with various team size, scheduling the work, allotting work to team members, monitor them on a daily basis to resolve issues and do code reviews. 
+            </li>
+            <li>
+              Enthusiast about Big Data Analytics, how it helps to understand and predict numbers, trying my hands on Salesforce, Hadoop.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" role="tab" id="questionTwo">
+        <h5 class="card-title">
+          <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerTwo" aria-expanded="false" aria-controls="answerTwo">
+            Career Summary
+          </a>
+        </h5>
+      </div>
+      <div id="answerTwo" class="collapse" role="tabcard" aria-labelledby="questionTwo">
+        <div class="card-block">
+          <ol>
+            <li>
+              Working as Senior Consultant with Deloitte Consulting India Private Ltd., Mumbai India (5th Jan 2015 – till Date)
+            </li>
+            <li>
+              Worked as Technical Lead at IGATE Global Solutions Ltd. (acquired by Capgemini), Pune, India (30th Sept 2013 - 15th Dec 2014)
+            </li>
+            <li>
+              Worked as Project Lead at e-Zest Solutions Ltd, Pune, India (28th Feb 2008 – 17th Sept 2013). 
+            </li>
+            <li>
+              Worked as Associate Software Developer at Info Spectrum India Private Ltd (acquired by Persistent Systems), Nagpur, India (11th sept 2006 – 13th Feb 2008). 
+            </li>
+            <li>
+              Worked as Software Programmer at Accenture Services Pvt. Ltd, Mumbai, India (19th Apr 2005 - 15th Sept 2006)
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" role="tab" id="questionThree">
+        <h5 class="card-title">
+          <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerThree" aria-expanded="true" aria-controls="answerThree">
+            Skills
+          </a>
+        </h5>
+      </div>
+      <div id="answerThree" class="collapse in" role="tabcard" aria-labelledby="questionThree">
+        <div class="card-block">
+          <ol>
+            <li>
+              .Net: ASP.Net, C#, Angular 2/4, Node.js, Bootstrap, HTML, CSS, ASP.NET Web Forms, ASP.MVC, Razor, ASP.NET Web API, WCF, Web Services, SOA, ADO.NET, LINQ
+              Design Patterns: Factory, Singleton, Façade, IoC, Dependency Injection using Unity
+            </li>
+            <li>
+              Testing Tools: Selenium, Web Driver, TFS, MTM, HP QC, JIRA 
+            </li>
+            <li>
+              Designing: Angular 2/4, Node.js, Bootstrap, HTML, CSS 3, XML, HTML, CSS
+            </li>
+            <li>
+              Scripting language: C#, typescript, JavaScript, jQuery
+            </li>
+            <li>
+              Special tools: VSTS, TFS, GitHub, Atom, SubLime, SVN, Enterprise Architect, Selenium, PUTTY, WinSCP, Resharper, FXCop, NuGet
+            </li>
+            <li>
+              Database: Microsoft SQL Server, 2000-2012
+            </li>
+            <li>
+              Operating System: Windows 8, 10 and Linux
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <hr>
+
+  <button type="button" class="btn btn-primary" (click)="toggleDiv()" >{{checkboxValue}}</button>
+  <!--<button type="button" class="btn btn-secondary" (click)="toggleDiv()" >Table</button>-->
+
+    <div id="dGrid" class="dskills" *ngIf="toggleDivs">
+      <div id="divHead" class="row">
+        <div class="col-4">Expert</div>
+        <div class="col-4">Intermediate</div>
+        <div class="col-4">Beginner</div>
+      </div>
+      <div class="row">
+        <div class="col-2">.net</div>
+        <div class="col-2">ASP.net</div>
+        <div class="col-2">MVC</div>
+        <div class="col-2">Angular 2/4</div>
+        <div class="col-4">NodeJS</div>
+      </div>
+      <div class="row">
+        <div class="col-4">C#, HTML 5</div>
+        <div class="col-4">CSS3</div>
+        <div class="col-2">PWA</div> 
+        <div class="col-2">Firebase</div> 
+      </div>
+      <div class="row">
+        <div class="col-6">javascript typrscript</div>
+        <div class="col-6">Bootstrap</div>
+      </div>
+      <div class="row">
+        <div class="col-2">Specflow</div>
+        <div class="col-2">Selenium</div>
+        <div class="col-2">WebAPI</div>
+        <div class="col-2">WCF</div>
+        <div class="col-2">Jasmine</div>
+        <div class="col-2">Protractor</div>
+      </div>
+      <div class="row">
+        <div class="col-12">MSSQL</div>
+      </div>
+    </div>
+
+    <div id="dTable" *ngIf="!toggleDivs">
+      <table class="table table-inverse">
+        <thead>
+          <tr id="trHead" >
+            <td>Expert</td>
+            <td>Intermediate</td>
+            <td>Beginner</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>.net</td>
+            <td>Angular 2/4</td>
+            <td>NodeJS</td>
+          </tr>
+          <tr>
+            <td>ASP.net</td>
+            <td>MVC</td>
+            <td>Mobile Web App</td>
+          </tr>
+          <tr>
+            <td>C#</td>
+            <td>typrscript/javascript</td>
+            <td>Bootstrap</td>
+          </tr>
+          <tr>
+            <td>MSSQL</td>
+            <td>MVC</td>
+            <td>Firebase/PWA</td>
+          </tr>
+          <tr>
+            <td>Specflow/Selenium</td>
+            <td>WebAPI/WCF</td>
+            <td>Jasmine/Protractor</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</ion-content>

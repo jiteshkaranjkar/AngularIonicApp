@@ -1,0 +1,57 @@
+page-resume {
+    .ion-content
+    {
+        background-color:black;
+    }
+    
+    .dskills{
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+    .dskills div[class^="col"] {
+        border: 1px solid #f5f5ff;
+        background: #3f4041;
+        color: #f5f5ff;
+        text-align: center;
+        padding: 2px;
+        height:30px;
+        font-size: x-small;
+	}
+    
+    #divHead div{
+        font-weight: bolder;
+        background-color: black;
+        color: #f5f5ff;
+    }
+
+    #divHead div:first-letter{
+        font-size:medium;
+        color: chartreuse;
+    }
+
+    #dTable
+    {
+        padding-top:10px; 
+        font-size: x-small;
+    }
+
+    #trHead td{
+        font-weight: bolder;
+        background-color: black;
+        color: #f5f5ff;
+        }
+
+    #trHead td:first-letter{
+        font-size:medium;
+        color: chartreuse;
+    }
+
+    .resume
+    {
+        color: white;
+        font-weight: bold;
+        width: 100%;
+    }
+}

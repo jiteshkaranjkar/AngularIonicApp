@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon> 
+    </button>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-image:url(assets/images/bgPic2.jpg); font-size:1.5em; ">
+  <form class="form-horizontal" action="" [formGroup]="loginFrmGrp" (ngSubmit)="onLogin(loginFrmGrp.value)">
+    <div class="container" style="border: 1px;">
+      <div class="form-group">
+          <label for="UserName" class="col-sm-3 control-label">
+              User Name
+          </label>
+          <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="User Name" required formControlName="UserName">
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="UserPwd" class="col-sm-3 control-label">
+              Password
+          </label>
+          <div class="col-sm-9">
+              <input type="password" class="form-control" placeholder="Password" required formControlName="UserPwd">
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+              <div class="checkbox">
+                  <label>
+                      <input type="checkbox" />
+                      Remember me
+                  </label>
+              </div>
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+              <button type="submit" class="btn btn-success">
+                  Login
+              </button>
+              <button type="reset" class="btn btn-default" (click)="resetControls()">
+                  Reset
+              </button>
+          </div>
+      </div>
+      <div class="panel-footer">
+          Not Registred? <a data-dismiss="modal">Register here</a>
+      </div>
+    </div>
+  </form>
+</ion-content>
